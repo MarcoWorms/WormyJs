@@ -8,6 +8,8 @@ GameObject properties: x, y, width, height, shape
 GameObject methods: centerX, centerY, r, distanceTo, boundingBox, isColliding, draw  
 *both draw() and isColliding() will adjust itself accordingly to it's shape
 
+*spherical GameObjects will be drawn based on centerX and centerY of it's boundingBox
+
 ### How to use the Engine:
 You should override: initialize(), update() and draw()  
 -Initialize your GameObjects in "initialize()"  
