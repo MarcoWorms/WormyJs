@@ -1,7 +1,7 @@
 # WormyJs
 HTML5 pure JS + canvas game engine  
 
-#### * I'm rewriting it with ES6 *
+#### * I will rewrite this with ES6 *
 
 ![alt text](http://i.imgur.com/mkpamem.png?1 "preview")
 
