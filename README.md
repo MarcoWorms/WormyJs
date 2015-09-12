@@ -1,6 +1,8 @@
 # WormyJs
 HTML5 pure JS + canvas game engine
 
+![alt text](http://i.imgur.com/mkpamem.png?1 "preview")
+
 Latest release - https://jsfiddle.net/1c57vhs1/18/
 
 Hi there! I'd like to talk about this engine's purpose.  
@@ -25,5 +27,3 @@ GameObject methods: centerX, centerY, r, distanceTo, boundingBox, isColliding, d
 
 
 *both background and default drawing colors can be set at "clearCanvas()" method on the Engine object.
-
-![alt text](http://i.imgur.com/mkpamem.png?1 "preview")
