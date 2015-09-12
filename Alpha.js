@@ -160,7 +160,7 @@ function Engine(canvasId) {
         var font = (font === undefined) ? "24px Arial" : font
 
         this.context.font = font;
-        this.context.fillText("Keys Down: " + JSON.stringify(text),10,100);
+        this.context.fillText(text, x, y);
     }
 
 }
@@ -187,7 +187,7 @@ engine.draw = function() {
 
     this.player.draw(this.context, "rgb(255, 0, 0)");
     this.obstacle.draw(this.context); //color defaults to black, "rgb(0, 0, 0)"
-    this.drawText(this.keysDown); //x and y defaults to 50, font defaults to "24px Arial"
+    this.drawText("Keys Down: " + JSON.stringify(this.keysDown)); //x and y defaults to 50, font defaults to "24px Arial"
 
 }
 
