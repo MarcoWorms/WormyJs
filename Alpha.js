@@ -190,12 +190,3 @@ engine.draw = function() {
 }
 
 engine.fireUp();
-
-
-
-
-
-
-
-
-
