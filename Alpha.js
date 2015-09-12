@@ -97,7 +97,6 @@ function GameObject(x, y, width, height, shape) {
 
 }
 
-
 function Engine(canvasId) {
 
     self = this;
@@ -154,7 +153,9 @@ function Engine(canvasId) {
     this.draw = function() {
     }
 
-    this.drawText = function(text, font) {
+    this.drawText = function(text, x, y, font) {
+        var x = (x === undefined) ? 50 : x
+        var y = (y === undefined) ? 50 : y
         var font = (font === undefined) ? "24px Arial" : font
 
         this.context.font = font;
@@ -185,7 +186,7 @@ engine.draw = function() {
 
     this.player.draw(this.context, "rgb(255, 0, 0)");
     this.obstacle.draw(this.context); //color defaults to black, "rgb(0, 0, 0)"
-    this.drawText(this.keysDown); //font defaults to "24px Arial"
+    this.drawText(this.keysDown); //x and y defaults to 50, font defaults to "24px Arial"
 
 }
 
