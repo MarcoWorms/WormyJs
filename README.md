@@ -3,6 +3,10 @@ HTML5 pure JS + canvas game engine
 
 Latest release - https://jsfiddle.net/1c57vhs1/18/
 
+Hi there! I'd like to talk about this engine's purpose.  
+I'm an amateur gamedev who likes to fastly protoype a game mechanic just to see how it's like. I'm writing this to be a "game prototyping engine", my goal here is to make a fast approach to common basic gamedev needs like "draw a colored square(or circle) instead of an sprite" or "give me fast basic collision". I came from ruby to js and this idea was inspired by Gosu, Phaser and Construct2.  
+Any feedback is welcome :)
+
 ## Alpha notes:
 GameObject properties: x, y, width, height, shape  
 GameObject methods: centerX, centerY, r, distanceTo, boundingBox, isColliding, draw 
