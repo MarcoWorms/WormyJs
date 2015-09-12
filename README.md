@@ -12,10 +12,13 @@ GameObject methods: centerX, centerY, r, distanceTo, boundingBox, isColliding, d
 *spherical GameObjects will be drawn based on centerX and centerY of it's boundingBox
 
 ### How to use the Engine:
-You should override: initialize(), update() and draw()  
--Initialize your GameObjects in "initialize()"  
--"update()" runs 60 times/s, use deltaTime modifier for framerate independency. Use this for your game logic.  
--"draw()" is called right after update. Use this for drawing your GameObjects  
+- You should override: initialize(), update() and draw()  
+- Initialize your GameObjects in "initialize()"  
+- "update()" runs 60 times/s, use deltaTime modifier for framerate independency. Use this for your game logic.  
+- "draw()" is called right after update. Use this for drawing your GameObjects  
+- Use "this.drawText()" to draw text
+- this.keysDown contains user input
+
 
 *both background and default drawing colors can be set at "clearCanvas()" method on the Engine object.
 
