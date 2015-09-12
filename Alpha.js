@@ -88,6 +88,7 @@ function GameObject(x, y, width, height, shape) {
             context.fillRect(this.x, this.y, this.width, this.height);
         }
         else if (this.shape == "sphere") {
+            context.beginPath();
             context.arc(this.centerX(), this.centerY(), this.r(), 0, 2 * Math.PI);
             context.fillStyle = color;
             context.fill();
