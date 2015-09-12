@@ -158,7 +158,7 @@ function Engine(canvasId) {
         var font = (font === undefined) ? "24px Arial" : font
 
         this.context.font = font;
-        this.context.fillText("Keys Down: "JSON.stringify(text),10,100);
+        this.context.fillText("Keys Down: " + JSON.stringify(text),10,100);
     }
 
 }
