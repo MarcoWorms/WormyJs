@@ -1,4 +1,11 @@
-function GameObject(x=10, y=10, width=100, height=100, shape="sphere") {
+function GameObject(x, y, width, height, shape) {
+
+    //seta valores padrão para argumentos não enviados
+    var x      = (x === undefined)      ? 10 : x
+    var y      = (y === undefined)      ? 10 : y
+    var width  = (width === undefined)  ? 100 : width
+    var height = (height === undefined) ? 100 : height
+    var shape = (shape === undefined) ? "sphere" : shape
 
     this.x = x;
     this.y = y;
@@ -72,7 +79,8 @@ function GameObject(x=10, y=10, width=100, height=100, shape="sphere") {
         }
     }
 
-    this.draw = function (context, color="rgb(0, 0, 0)") {
+    this.draw = function (context, color) {
+        var color = (color === undefined) ? "rgb(0, 0, 0)" : color
 
 
         if (this.shape == "rectangle") {
@@ -146,9 +154,13 @@ function Engine(canvasId) {
     this.draw = function() {
     }
 
-    this.drawText = function(text, x=50, y=50, font="24px Arial") {
+    this.drawText = function(text, x, y, font) {
+        var x = (x === undefined) ? 50 : x
+        var y = (y === undefined) ? 50 : y
+        var font = (font === undefined) ? "24px Arial" : font
+
         this.context.font = font;
-        this.context.fillText(text), x, y);
+        this.context.fillText("Keys Down: " + JSON.stringify(text),10,100);
     }
 
 }
@@ -175,7 +187,7 @@ engine.draw = function() {
 
     this.player.draw(this.context, "rgb(255, 0, 0)");
     this.obstacle.draw(this.context); //color defaults to black, "rgb(0, 0, 0)"
-    this.drawText(JSON.stringify(this.keysDown)); //x and y defaults to 50, font defaults to "24px Arial"
+    this.drawText(this.keysDown); //x and y defaults to 50, font defaults to "24px Arial"
 
 }
 
