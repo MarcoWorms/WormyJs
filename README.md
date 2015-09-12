@@ -22,4 +22,4 @@ GameObject methods: centerX, centerY, r, distanceTo, boundingBox, isColliding, d
 
 *both background and default drawing colors can be set at "clearCanvas()" method on the Engine object.
 
-![alt text](http://i.imgur.com/59i0K7E.png?1 "preview")
+![alt text](http://i.imgur.com/mkpamem.png?1 "preview")
