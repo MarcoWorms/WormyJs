@@ -100,6 +100,18 @@ function GameObject(x, y, width, height, shape) {
 
 function Engine(canvasId) {
 
+    self = this;
+
+    self.keysDown = {};
+
+    addEventListener("keydown", function (e) {
+        self.keysDown[e.keyCode] = true;
+    }, true);
+
+    addEventListener("keyup", function (e) {
+        delete self.keysDown[e.keyCode];
+    }, true);
+
     this.canvas = document.getElementById(canvasId);
     this.context = this.canvas.getContext("2d");
 
@@ -142,6 +154,13 @@ function Engine(canvasId) {
     this.draw = function() {
     }
 
+    this.drawText = function(text, font) {
+        var font = (font === undefined) ? "24px Arial" : font
+
+        this.context.font = font;
+        this.context.fillText("Keys Down: "JSON.stringify(text),10,100);
+    }
+
 }
 
 var engine = new Engine("game_window");
@@ -166,6 +185,7 @@ engine.draw = function() {
 
     this.player.draw(this.context, "rgb(255, 0, 0)");
     this.obstacle.draw(this.context); //color defaults to black, "rgb(0, 0, 0)"
+    this.drawText(this.keysDown); //font defaults to "24px Arial"
 
 }
 
