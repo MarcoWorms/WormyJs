@@ -1,7 +1,7 @@
 # WormyJs
 HTML5 pure JS + canvas game engine
 
-Latest release - https://jsfiddle.net/1c57vhs1/13/
+Latest release - https://jsfiddle.net/1c57vhs1/15/
 
 ## Alpha notes:
 GameObject properties: x, y, width, height, shape  
