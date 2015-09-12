@@ -7,10 +7,9 @@ latest release - https://jsfiddle.net/1c57vhs1/13/
 GameObject properties: x, y, width, height, shape
 
 GameObject methods: centerX, centerY, r, distanceTo, boundingBox, isColliding, draw
-
 *both draw() and isColliding() will adjust itself accordingly to it's shape
 
-How to use the Engine:
+### How to use the Engine:
 
 you should override: initialize(), update() and draw()
 
