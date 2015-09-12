@@ -16,4 +16,6 @@ You should override: initialize(), update() and draw()
 -"update()" runs 60 times/s, use deltaTime modifier for framerate independency. use it for your game logic.  
 -"draw()" is called right after update. use it for drawing your GameObjects
 
+*both background and default drawing colors can be set at "clearCanvas()" method on the Engine object.
+
 ![alt text](http://i.imgur.com/59i0K7E.png?1 "preview")
