@@ -13,8 +13,8 @@ GameObject methods: centerX, centerY, r, distanceTo, boundingBox, isColliding, d
 ### How to use the Engine:
 You should override: initialize(), update() and draw()  
 -Initialize your GameObjects in "initialize()"  
--"update()" runs 60 times/s, use deltaTime modifier for framerate independency. use it for your game logic.  
--"draw()" is called right after update. use it for drawing your GameObjects  
+-"update()" runs 60 times/s, use deltaTime modifier for framerate independency. Use this for your game logic.  
+-"draw()" is called right after update. Use this for drawing your GameObjects  
 *both background and default drawing colors can be set at "clearCanvas()" method on the Engine object.
 
 ![alt text](http://i.imgur.com/59i0K7E.png?1 "preview")
