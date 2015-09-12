@@ -1,5 +1,6 @@
 # WormyJs
-HTML5 pure JS + canvas game engine
+HTML5 pure JS + canvas game engine  
+Broken ATM because I'm rewriting it with ES6
 
 ![alt text](http://i.imgur.com/mkpamem.png?1 "preview")
 
