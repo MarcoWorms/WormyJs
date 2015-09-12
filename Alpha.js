@@ -117,7 +117,7 @@ function Engine(canvasId) {
         var deltaTime = now - this.then;
 
         this.update(deltaTime / 1000);
-        this.cleanCanvas("rgb(0, 255, 255)", "rgb(0, 0, 0)");
+        this.cleanCanvas("rgb(0, 255, 255)", "rgb(0, 0, 0)"); //background color, default color
         this.draw();
 
         this.then = now;
