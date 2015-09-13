@@ -100,16 +100,19 @@ function GameObject(x, y, width, height, shape) {
 
 function Engine(canvasId) {
 
-    self = this;
+    var self = this;
 
-    self.keysDown = {};
+    self.keysDown = [];
+    for (i=256; i > 0; i--) {
+        self.keysDown.push(0);
+    }
 
     addEventListener("keydown", function (e) {
-        self.keysDown[e.keyCode] = true;
+        self.keysDown[e.keyCode] = 1;
     }, true);
 
     addEventListener("keyup", function (e) {
-        delete self.keysDown[e.keyCode];
+        self.keysDown[e.keyCode] = 0;
     }, true);
 
     this.canvas = document.getElementById(canvasId);
@@ -154,10 +157,10 @@ function Engine(canvasId) {
     this.draw = function() {
     }
 
-    this.drawText = function(text, x, y, font) {
+    this.drawText = function(text, font, x, y) {
+        var font = (font === undefined) ? "24px Arial" : font
         var x = (x === undefined) ? 50 : x
         var y = (y === undefined) ? 50 : y
-        var font = (font === undefined) ? "24px Arial" : font
 
         this.context.font = font;
         this.context.fillText(text, x, y);
@@ -187,7 +190,7 @@ engine.draw = function() {
 
     this.player.draw(this.context, "rgb(255, 0, 0)");
     this.obstacle.draw(this.context); //color defaults to black, "rgb(0, 0, 0)"
-    this.drawText("Keys Down: " + JSON.stringify(this.keysDown)); //x and y defaults to 50, font defaults to "24px Arial"
+    this.drawText("Keys Down: " + JSON.stringify(this.keysDown), "10px Arial"); //x and y defaults to 50, font defaults to "24px Arial"
 
 }
 
