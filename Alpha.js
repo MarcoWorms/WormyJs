@@ -126,8 +126,6 @@ function Engine(canvasId) {
 
     this.core = function() {
 
-        var self = this;
-
         var now = Date.now();
         var deltaTime = now - this.then;
 
@@ -137,7 +135,7 @@ function Engine(canvasId) {
 
         this.then = now;
 
-        requestAnimationFrame(function() {self.core()});
+        requestAnimationFrame(this.core.bind(this));
     }
 
     this.cleanCanvas = function(rgbBg, rgbDefault) {
