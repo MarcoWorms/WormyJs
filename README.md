@@ -1,3 +1,6 @@
+### This project has been discontinued, there are a lot of good canvas engines out there, i'd rather work on something more exotic. https://github.com/MarcoWorms/asciiD
+
+
 # WormyJs
 HTML5 pure JS + canvas game engine  
 
